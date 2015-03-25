@@ -10,7 +10,11 @@ For full documentation on Aviary's feather editor, see: https://developers.aviar
 
 ## Usage
 
-An Aviary api key is required to use the widget. The component will look for a global `AVIARY_API_KEY` or a meta tag of the form:  `<meta property="aviary:api_key" content="[AVIARY_API_KEY]" />`
+An Aviary api key is required to use the widget. The component will look for a global `AVIARY_API_KEY` or a meta tag of the form:  
+
+```
+<meta property="aviary:api_key" content="[AVIARY_API_KEY]" />
+```
 
 You can simply use the component helper like so:
 
