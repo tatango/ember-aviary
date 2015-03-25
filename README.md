@@ -16,7 +16,7 @@ An Aviary api key is required to use the widget. The component will look for a g
 <meta property="aviary:api_key" content="[AVIARY_API_KEY]" />
 ```
 
-You can simply use the component helper like so:
+You can simply use the component helper in a template like so:
 
 
 ```
@@ -33,7 +33,7 @@ Optional:
 * `onSave` - is a call back you can pass in as an action.
 
 
-If your project uses scss, you can load the default style and icon by adding to `app/styles/app.scss` :
+If your project uses scss, you can load the default style and icon by adding:
 
 ```
 @import 'ember-aviary';
