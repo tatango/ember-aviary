@@ -34,7 +34,8 @@
     "rimraf": "2.2.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "aviary"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
