@@ -22,7 +22,6 @@ An Aviary api key is required to use the widget. You can set the api key in one 
 
 You can simply use the component helper in a template like so:
 
-
 ```
 {{aviary-editor url=url image=image onSave="onSave"}}
 ```
@@ -67,7 +66,7 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 ## TODO
 
 * Add complete tests and dummy app.
-* Allow passing more options into the `aviary-editor` component based on all the capabilities of Aviary's API.
+* Allow passing more options into the `aviary-editor` component.
 
 ## Contributors
 
