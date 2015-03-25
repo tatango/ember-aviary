@@ -10,5 +10,9 @@ export default Ember.Object.extend({
      apiKey: this.get('apiKey'),
      apiVersion: 3
    });
- }.property('apiKey')
+ }.property('apiKey'),
+
+ launch: function(options) {
+  this.get('featherEditor').launch(options);
+ }
 });
