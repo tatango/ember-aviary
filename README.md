@@ -63,7 +63,7 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 ## TODO
 
 * Add complete tests and dummy app.
-* Allow passing more options into the `aviary-editor` component.
+* Allow passing more options into the `aviary-editor` component based on all the capabilities of Aviary's API.
 * Better support different ways to load the Aviary api key (ie: from environment with [ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv) addon)
 
 ## Contributors
