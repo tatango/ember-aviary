@@ -1,6 +1,2 @@
-export default {
- name: 'aviary-service',
- initialize: function(container, application) {
-   application.inject('component:aviary-editor', 'aviaryApiClient', 'service:aviary-api-client');
- }
-};
+import AviaryServiceInitializer from 'ember-aviary/initializers/aviary-service';
+export default AviaryServiceInitializer;

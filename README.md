@@ -8,13 +8,17 @@ For full documentation on Aviary's feather editor, see: https://developers.aviar
 
 `npm install --save-dev ember-aviary`
 
+## Setup
+
+An Aviary api key is required to use the widget. You can set the api key in one of 3 ways:
+
+1. Set an `AVIARY_API_KEY` on `ENV` in `config/environment`. The [ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv) addon is a safe and easy way to do this.
+
+2. A metatag of the form: `<meta property="aviary:api_key" content="[AVIARY_API_KEY]" />`
+
+3. Set a global `AVIARY_API_KEY`.
+
 ## Usage
-
-An Aviary api key is required to use the widget. The component will look for a global `AVIARY_API_KEY` or a meta tag of the form:  
-
-```
-<meta property="aviary:api_key" content="[AVIARY_API_KEY]" />
-```
 
 You can simply use the component helper in a template like so:
 
@@ -27,8 +31,8 @@ The only required inputs for the component are:
 
 * `image` - either the image element to be edited or its ID. (ie: get after the DOM has been loaded with `$.('img')`)
 * `url` - this is only required if the image to be edited is on a different host than the HTML page.
-
-Optional:
+___
+Optional inputs:
 
 * `onSave` - is a call back you can pass in as an action.
 
@@ -64,7 +68,6 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 
 * Add complete tests and dummy app.
 * Allow passing more options into the `aviary-editor` component based on all the capabilities of Aviary's API.
-* Better support different ways to load the Aviary api key (ie: from environment with [ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv) addon)
 
 ## Contributors
 
