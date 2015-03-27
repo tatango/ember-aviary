@@ -1,0 +1,36 @@
+@import 'ember-aviary';
+
+html, body {
+  margin: 20px;
+}
+
+h2 {
+  font-family: 'Helvetica';
+  font-weight: normal;
+  margin: 0 auto 12px;
+}
+
+input {
+  z-index: 1000;
+}
+
+.image {
+  width: 100%;
+}
+
+.image .icon, .image img {
+  margin: 0px auto;
+  padding: 108px 0 0 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image img {
+  z-index: -1;
+}
+
+.image .icon {
+  z-index: 100;
+}
+

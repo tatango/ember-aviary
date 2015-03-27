@@ -2,9 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   aviaryApiClient: null, // injected
-
   classNames: ['edit-icon'],
-
   image: null,
   url: null,
   imageSelector: null,
