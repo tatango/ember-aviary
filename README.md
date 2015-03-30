@@ -36,7 +36,6 @@ Optional inputs:
 * `onSave` - is a call back you can pass in as an action.
 * `closeOnSave` - boolean to close editing modal upon save. Defaults to false.
 
-
 If your project uses scss, you can load the default style and icon by adding:
 
 ```
@@ -67,7 +66,7 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 ## TODO
 
 * Add complete tests and dummy app.
-* Allow passing more options into the `aviary-editor` component.
+* Allow passing more options into the aviary-editor component based on all the capabilities of Aviary's API.
 
 ## Contributors
 
