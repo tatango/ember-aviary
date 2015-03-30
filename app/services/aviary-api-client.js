@@ -10,4 +10,7 @@ export default AviaryApiClientService.extend({
     }
     return apiKey;
   }.property(),
+  theme: function() {
+    return ENV.AVIARY_THEME || Ember.$('meta[property="aviary:theme"]').attr('content') || window.AVIARY_THEME;
+  }.property()
 });

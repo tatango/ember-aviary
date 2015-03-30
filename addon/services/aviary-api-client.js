@@ -10,7 +10,8 @@ export default Ember.Object.extend({
     if (!featherEditor) {
       var aviaryFeather = new Aviary.Feather({
         apiKey: this.get('apiKey'),
-        apiVersion: 3
+        apiVersion: 3,
+        theme: this.get('theme')
       });
       this.set('featherEditor', aviaryFeather);
     }
