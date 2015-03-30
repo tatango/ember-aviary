@@ -23,7 +23,7 @@ An Aviary api key is required to use the widget. You can set the api key in one 
 You can simply use the component helper in a template like so:
 
 ```
-{{aviary-editor url=url image=image onSave="onSave"}}
+{{aviary-editor url=url image=image onSave="onSave" closeOnSave=closeOnSave}}
 ```
 
 The only required inputs for the component are:
@@ -34,6 +34,7 @@ ___
 Optional inputs:
 
 * `onSave` - is a call back you can pass in as an action.
+* `closeOnSave` - boolean to close editing modal upon save. Defaults to false.
 
 
 If your project uses scss, you can load the default style and icon by adding:

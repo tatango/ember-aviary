@@ -2,9 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   aviaryApiClient: null, // injected
+
   classNames: ['edit-icon'],
+
   image: null,
   url: null,
+  closeOnSave: false,
 
   click: function() {
     var self = this;
@@ -24,6 +27,10 @@ export default Ember.Component.extend({
   actions: {
     onSave: function(imageId, src) {
       this.sendAction('onSave', imageId, src);
+
+      var closeOnSave = this.get('closeOnSave');
+      var featherEditor = this.aviaryApiClient.get('featherEditor');
+      if(closeOnSave) { featherEditor.close(); }
     }
   }
 });
