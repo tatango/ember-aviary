@@ -28,7 +28,7 @@ You can simply use the component helper in a template like so:
 
 The only required inputs for the component are:
 
-* `image` - either the image element to be edited or its ID. (ie: get after the DOM has been loaded with `$.('img')`)
+* `image` or `imageSelector` - either the image element to be edited or its ID. (ie: get after the DOM has been loaded with `$.('img')`)
 * `url` - this is only required if the image to be edited is on a different host than the HTML page.
 ___
 Optional inputs:
