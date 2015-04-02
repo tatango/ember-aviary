@@ -38,7 +38,6 @@
     "aviary"
   ],
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "defaultBlueprint": "ember-aviary"
+    "configPath": "tests/dummy/config"
   }
 }

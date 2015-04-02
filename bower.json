@@ -1,7 +1,7 @@
 {
   "name": "ember-aviary",
   "version": "0.0.4",
-  "dependencies": {
+  "devDependencies": {
     "handlebars": "~1.3.0",
     "jquery": "^1.11.1",
     "ember": "1.8.1",
@@ -14,6 +14,6 @@
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.5",
     "qunit": "~1.17.1",
-    "aviary": "http://feather.aviary.com/imaging/v1/editor.js"
+    "aviary-editor": "3.1.0"
   }
 }

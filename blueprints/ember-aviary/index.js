@@ -4,6 +4,6 @@ module.exports = {
   normalizeEntityName: function() {},
 
   afterInstall: function() {
-    return this.addBowerPackagesToProject('aviary');
+    return this.addBowerPackagesToProject([{ name: 'aviary-editor', target: '3.1.0'}]);
   }
 }
