@@ -7,6 +7,7 @@ For full documentation on Aviary's feather editor, see: https://developers.aviar
 ## Installation
 
 `npm install --save-dev ember-aviary`
+
 `ember g aviary-editor`
 
 ## Setup
