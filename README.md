@@ -7,10 +7,11 @@ For full documentation on Aviary's feather editor, see: https://developers.aviar
 ## Installation
 
 `npm install --save-dev ember-aviary`
+`ember g aviary-editor`
 
 ## Setup
 
-An Aviary api key is required to use the widget. You can set the api key in one of 3 ways:
+An Aviary api key is required to save images. You can set the api key in one of 3 ways:
 
 1. Set an `AVIARY_API_KEY` on `ENV` in `config/environment`. The [ember-cli-dotenv](https://github.com/fivetanley/ember-cli-dotenv) addon is a safe and easy way to do this.
 
