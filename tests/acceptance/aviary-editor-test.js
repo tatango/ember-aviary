@@ -17,6 +17,6 @@ test('renders component', function() {
   visit('/');
 
   andThen(function() {
-    equal(find('.aviary-editor').length, 1, "Renders aviary-editor component");
+    equal(find('.edit-icon').length, 1, 'Renders aviary-editor component');
   });
 });
