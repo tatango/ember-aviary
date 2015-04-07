@@ -13,10 +13,15 @@ module('Acceptance: Aviary Editor', {
 });
 
 test('renders component', function() {
-  expect(1);
+  expect(2);
   visit('/');
 
   andThen(function() {
-    equal(find('.edit-icon').length, 1, 'Renders aviary-editor component');
+    equal(find('.edit-icon').length, 1, 'Aviary editor component was rendered.');
+    click('.edit-icon');
+  });
+
+  andThen(function() {
+    equal(find('.edit-icon.active').length, 1, 'Aviary editor launched.');
   });
 });
