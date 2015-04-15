@@ -1,5 +1,7 @@
 # ember-aviary
 
+[![Build Status](https://travis-ci.org/plyfe/ember-aviary.svg?branch=master)](https://travis-ci.org/plyfe/ember-aviary)
+
 ember-aviary is an easy way to add Aviary's web widget (feather) to your ember-cli project. The goal is to encapsulate everything in a simple Ember component. We welcome contributions!
 
 For full documentation on Aviary's feather editor, see: https://developers.aviary.com/docs/web/setup-guide
