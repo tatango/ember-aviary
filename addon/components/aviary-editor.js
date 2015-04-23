@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   classNameBindings: ['featherActive:active'],
   image: null,
   url: null,
+  fileFormat: null,
   imageSelector: null,
   closeOnSave: false,
   featherActive: false,
@@ -21,6 +22,7 @@ export default Ember.Component.extend({
     var options = {
       image: this.get('imageToEdit'),
       url: this.get('url'),
+      fileFormat: this.get('fileFormat'),
       onSave: function(imageId, src) {
         self.send('onSave', imageId, src);
       },
