@@ -39,6 +39,7 @@ Optional inputs:
 
 * `onSave` - is a call back you can pass in as an action.
 * `closeOnSave` - boolean to close editing modal upon save. Defaults to false.
+* `fileFormat` - string that sets the file format that Aviary returns. Defaults to 'jpg'. Accepts 'png' or 'jpg'.
 
 If your project uses scss, you can load the default style and icon by adding:
 
