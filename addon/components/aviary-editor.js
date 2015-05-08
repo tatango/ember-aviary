@@ -29,7 +29,7 @@ export default Ember.Component.extend({
       }
     };
 
-    this.aviaryApiClient.launch(options);
+    this.aviaryApiClient.launch(options, {apiKey: this.get('apiKey'), theme: this.get('theme')});
     this.set('featherActive', true);
 
     return false;
