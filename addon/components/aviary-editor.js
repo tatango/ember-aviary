@@ -9,6 +9,12 @@ export default Ember.Component.extend({
   imageSelector: null,
   closeOnSave: false,
   featherActive: false,
+  initOptions: function(){
+    return {apiKey: this.get('apiKey'), theme: this.get('theme')};
+  }.property('apiKey', 'theme'),
+  onInserted: function(){
+    this.aviaryApiClient.initFeatherEditor(this.get('initOptions'));
+  }.on('didInsertElement'),
 
   imageToEdit: function() {
     var imageNotSet = Ember.isEmpty(this.get('image'));
@@ -29,7 +35,7 @@ export default Ember.Component.extend({
       }
     };
 
-    this.aviaryApiClient.launch(options);
+    this.aviaryApiClient.launch(options, this.get('initOptions'));
     this.set('featherActive', true);
 
     return false;
