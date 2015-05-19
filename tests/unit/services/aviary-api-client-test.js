@@ -4,17 +4,17 @@ import env from 'dummy/config/environment';
 import QUnit from 'qunit';
 
 moduleFor('service:aviary-api-client', 'AviaryApiClientService', {
-  beforeEach: function() {
+  setup: function() {
     env.AVIARY_API_KEY = "yek321";
     env.AVIARY_THEME = "dark";
-  },
-  afterEach: function(){}
+    this.container.register('config:environment', env);
+  }
 });
 
 test('api key uses ENV variable', function() {
   expect(1);
   var service = this.subject();
-  equal(service.get('apiKey', "yek321"));
+  equal(service.get('apiKey'), "yek321");
 });
 
 test('api key defaults to global if no env variable or meta tag exists', function(){
@@ -28,7 +28,7 @@ test('api key defaults to global if no env variable or meta tag exists', functio
 test('theme uses ENV variable', function() {
   expect(1);
   var service = this.subject();
-  equal(service.get('theme', "dark"));
+  equal(service.get('theme'), "dark");
 });
 
 test('theme defaults to global if no env variable or meta tag exists', function(){
