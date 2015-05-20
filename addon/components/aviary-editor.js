@@ -23,8 +23,10 @@ export default Ember.Component.extend({
   forceCropPresetArray: function() {
     var label = this.get('forceCropPresetLabel');
     var size = this.get('forceCropPresetSize');
-    return label && size ? [label, size] : null;
+    return label && size ? [label, size] : [];
   }.property('forceCropPresetName', 'forceCropPresetSize'),
+
+  hasForceCropPreset: Ember.computed.notEmpty('forceCropPresetArray'),
 
   click: function() {
     var self = this;
@@ -43,7 +45,7 @@ export default Ember.Component.extend({
     };
 
     // Property should not be included in options if not present.
-    if(this.get('forceCropPresetArray')) {
+    if(this.get('hasForceCropPreset')) {
       options.forceCropPreset = this.get('forceCropPresetArray');
       options.forceCropMessage = this.get('forceCropMessage');
     }
