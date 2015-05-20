@@ -8,8 +8,6 @@ export default Ember.Component.extend({
   url: null,
   fileFormat: null,
   cropPresetsStrict: false,
-  forceCropPresetName: null,
-  forceCropPresetSize: null,
   forceCropMessage: null,
   imageSelector: null,
   closeOnSave: false,
@@ -22,10 +20,9 @@ export default Ember.Component.extend({
   }.property('parentView', 'image', 'imageSelector'),
 
   forceCropPresetArray: function() {
-    var name = this.get('forceCropPresetName');
+    var label = this.get('forceCropPresetLabel');
     var size = this.get('forceCropPresetSize');
-
-    return name && size ? [name, size] : null;
+    return label && size ? [label, size] : null;
   }.property('forceCropPresetName', 'forceCropPresetSize'),
 
   click: function() {
