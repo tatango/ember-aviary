@@ -7,6 +7,10 @@ export default Ember.Component.extend({
   image: null,
   url: null,
   fileFormat: null,
+  cropPresetsStrict: false,
+  forceCropPresetName: null,
+  forceCropPresetSize: null,
+  forceCropMessage: null,
   imageSelector: null,
   closeOnSave: false,
   featherActive: false,
@@ -17,12 +21,20 @@ export default Ember.Component.extend({
     return imageNotSet ? this.get('parentView').$(selector || 'img') : this.get('image');
   }.property('parentView', 'image', 'imageSelector'),
 
+  forceCropPresetArray: function() {
+    var name = this.get('forceCropPresetName');
+    var size = this.get('forceCropPresetSize');
+
+    return name && size ? [name, size] : null;
+  }.property('forceCropPresetName', 'forceCropPresetSize'),
+
   click: function() {
     var self = this;
     var options = {
       image: this.get('imageToEdit'),
       url: this.get('url'),
       fileFormat: this.get('fileFormat'),
+      cropPresetsStrict: this.get('cropPresetsStrict'),
       onSave: function(imageId, src) {
         self.send('onSave', imageId, src);
       },
@@ -30,6 +42,12 @@ export default Ember.Component.extend({
         self.send('onClose');
       }
     };
+
+    // Property should not be included in options if not present.
+    if(this.get('forceCropPresetArray')) {
+      options.forceCropPreset = this.get('forceCropPresetArray');
+      options.forceCropMessage = this.get('forceCropMessage');
+    }
 
     this.aviaryApiClient.launch(options);
     this.set('featherActive', true);
