@@ -8,6 +8,7 @@ export default Ember.Component.extend({
   url: null,
   fileFormat: null,
   cropPresetsStrict: false,
+  tools: 'all',
   forceCropMessage: null,
   imageSelector: null,
   closeOnSave: false,
@@ -32,6 +33,7 @@ export default Ember.Component.extend({
       url: this.get('url'),
       fileFormat: this.get('fileFormat'),
       cropPresetsStrict: this.get('cropPresetsStrict'),
+      tools: this.get('tools'),
       onSave: function(imageId, src) {
         self.send('onSave', imageId, src);
       },
