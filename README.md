@@ -41,6 +41,12 @@ Optional inputs:
 * `closeOnSave` - boolean to close editing modal upon save. Defaults to false.
 * `fileFormat` - string that sets the file format that Aviary returns. Defaults to 'jpg'. Accepts 'png' or 'jpg'.
 
+Forced crop presets force user into crop tool when editor is launched.
+* `forceCropPresetLabel` - string that sets the head text.
+* `forceCropPresetSize` - string which should be a ratio '2:1' or dimension '300x250' the image being edited will be cropped.
+* `forceCropMessage` - string with custom message for users above crop preset label.
+* `tools` - array to include editor tools for user to display. Defaults to 'all'.
+
 If your project uses scss, you can load the default style and icon by adding:
 
 ```
